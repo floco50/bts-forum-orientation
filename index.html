@@ -1,75 +1,188 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Découvrez les formations BTS | Lycée Notre-Dame de la Providence - Avranches</title>
-        <meta name="description" content="L’ensemble scolaire Notre-Dame de La Providence, conscient de la place primordiale des parents dans l’éducation des enfants, s’engage à accompagner les jeunes"/>
-        <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
-        <link rel="canonical" href="https://ndlpavranches.fr/"/>
-        <meta property="og:locale" content="fr_FR"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="Accueil - Collège et Lycée Notre-Dame de la Providence - Avranches"/>
-        <meta property="og:description" content="L’ensemble scolaire Notre-Dame de La Providence, conscient de la place primordiale des parents dans l’éducation des enfants, s’engage à accompagner les jeunes"/>
-        <meta property="og:url" content="https://ndlpavranches.fr/"/>
-        <meta property="og:site_name" content="Ensemble Scolaire Notre-Dame de la Providence - Avranches"/>
-        <meta property="og:updated_time" content="2025-05-15T14:31:49+02:00"/>
-        <meta property="article:published_time" content="2024-02-15T15:54:11+01:00"/>
-        <meta property="article:modified_time" content="2025-05-15T14:31:49+02:00"/>
-        <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Accueil - Collège et Lycée Notre-Dame de la Providence - Avranches"/>
-        <meta name="twitter:description" content="L’ensemble scolaire Notre-Dame de La Providence, conscient de la place primordiale des parents dans l’éducation des enfants, s’engage à accompagner les jeunes"/>
-        <meta name="twitter:label1" content="Écrit par"/>
-        <meta name="twitter:data1" content="charlie"/>
-        <meta name="twitter:label2" content="Temps de lecture"/>
-        <meta name="twitter:data2" content="3 minutes"/>
-
-
-        <link rel="shortcut icon" href="assets/img/logos/college-lycee-notre-dame-providence-avranches-logo-couleur.png" type="image/x-icon">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Découvrez les formations BTS | Lycée Notre-Dame de la Providence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/logos/college-lycee-notre-dame-providence-avranches-logo-couleur.png"
+        type="image/x-icon">
 </head>
+
 <body>
+
     <header class="header_wrapper">
         <div class="header_container">
             <div class="header_logo">
-                <a href="https://"><img src="assets/img/logos/college-lycee-notre-dame-providence-avranches-logo-couleur.png" alt="Logo de l'ensemble scolaire Notre-Dame de la Providence Avranches"></a>
+                <a href="#">
+                    <img id="logo-ndlp"
+                        src="assets/img/logos/college-lycee-notre-dame-providence-avranches-logo-couleur.png"
+                        alt="Logo NDLP">
+                </a>
             </div>
-            <div class="header_bars">
-                <i class="fa-solid fa-bars"></i>
+            <div style="display: flex; align-items: center;">
+                <button id="theme-toggle" class="theme-switch" aria-label="Changer de mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <div class="header_bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="presentation_wrapper">
-        <div class="presentation_container">
-            <div class="presentation_text">
-                <h1>Pourquoi choisir une formation BTS ?​</h1>
-                <ul>
-                    <li>Diplôme d’état</li>
-                    <li>Formation courte : 2 ans</li>
-                    <li>Formation professionnelle : cours pratiques + stages en entreprises (au moins 10 semaines)</li>
-                    <li>Formation reconnue par les entreprises</li>
-                    <li>Taux d’insertion élevé</li>
-                    <li>Poursuite d’études possible : licence professionnelle, école d’ingénieur ou de commerce …</li>
-                </ul>
-                <h1>Pourquoi le lycée Notre-Dame de la Providence ?</h1>
-                <p>Le Lycée NDLP propose différentes options dans chaque BTS :</p>
-                <ul>
-                    <li>L'Alternance dès la deuxième année pour tous les BTS</li>
-                    <li>La prépa d'École d'ingénieur dès la première année pour le BTS SIO</li>
-                    <li>Le Toefl pour tous les BTS</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="presentation_wrapper">
+            <div class="presentation_container">
+                <div class="presentation_text">
+                    <h1>Pourquoi choisir une formation BTS ?</h1>
+                    <ul class="check_list">
+                        <li><i class="fa-solid fa-circle-check"></i> Diplôme d’état</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Formation courte : 2 ans</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Formation professionnelle (Stages > 10 sem.)</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Taux d’insertion élevé</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Poursuite d’études possible</li>
+                    </ul>
 
-    <section class="bts_wrapper">
-        <div class="bts_container">
-            <div class="bts_card">
-
+                    <h1>Pourquoi le lycée Notre-Dame de la Providence ?</h1>
+                    <p>Le Lycée NDLP propose des parcours personnalisés pour chaque étudiant :</p>
+                    <ul class="feature_list">
+                        <li><strong>L'Alternance</strong> dès la 2ème année pour tous les BTS</li>
+                        <li><strong>Prépa École d'ingénieur</strong> intégrée au BTS SIO</li>
+                        <li><strong>Certification TOEFL</strong> disponible pour tous</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="bts_wrapper">
+            <div class="bts_container">
+                <article class="bts_card">
+                    <div class="card_image">
+                        <img src="assets/img/formations/bts_sio.png" alt="BTS SIO">
+                        <span class="tag">Informatique</span>
+                    </div>
+                    <div class="card_content">
+                        <h3>BTS SIO</h3>
+                        <p>Services Informatiques aux Organisations</p>
+                        <div class="card_options">
+                            <span><i class="fa-solid fa-graduation-cap"></i> SISR ou SLAM</span>
+                            <span><i class="fa-solid fa-clock"></i> Option Alternance</span>
+                            <span><i class="fa-solid fa-graduation-cap"></i>Option Prépa École d'Ingénieur</span>
+                            <span><i class="fa-solid fa-graduation-cap"></i>Option TOFEL</span>
+                        </div>
+                        <a href="#" class="btn_card">Découvrir la formation</a>
+                    </div>
+                </article>
+
+                <article class="bts_card">
+                    <div class="card_image">
+                        <img src="assets/img/formations/bts_sam.png" alt="BTS SAM">
+                        <span class="tag">Management</span>
+                    </div>
+                    <div class="card_content">
+                        <h3>BTS SAM</h3>
+                        <p>Support à l'Action Managériale</p>
+                        <div class="card_options">
+                            <span><i class="fa-solid fa-globe"></i> International</span>
+                            <span><i class="fa-solid fa-clock"></i> Option Alternance</span>
+                            <span><i class="fa-solid fa-graduation-cap"></i>Option TOFEL</span>
+                        </div>
+                        <a href="#" class="btn_card">Découvrir la formation</a>
+                    </div>
+                </article>
+
+                <article class="bts_card">
+                    <div class="card_image">
+                        <img src="assets/img/formations/bts_gpme.png" alt="BTS GPME">
+                        <span class="tag">Commerce</span>
+                    </div>
+                    <div class="card_content">
+                        <h3>BTS GPME</h3>
+                        <p>Gestion de la PME</p>
+                        <div class="card_options">
+                            <span><i class="fa-solid fa-store"></i> Unité Commerciale</span>
+                            <span><i class="fa-solid fa-clock"></i> Option Alternance</span>
+                            <span><i class="fa-solid fa-graduation-cap"></i>Option TOFEL</span>
+                        </div>
+                        <a href="#" class="btn_card">Découvrir la formation</a>
+                    </div>
+                </article>
+                <article class="bts_card card-red">
+                    <div class="card_image">
+                        <img src="assets/img/formations/isen-yncrea-ouest.jpeg" alt="Prépa ISEN">
+                        <span class="tag">Ingénierie</span>
+                    </div>
+                    <div class="card_content">
+                        <h3>Prépa ISEN</h3>
+                        <p>Classe préparatoire intégrée - Cycle Informatique & Numérique</p>
+                        <div class="card_options">
+                            <span><i class="fa-solid fa-microchip"></i> Technologie & Innovation</span>
+                            <span><i class="fa-solid fa-rocket"></i> Accès direct école d'ingénieurs</span>
+                        </div>
+                        <a href="https://isen-ouest.fr/" target="_blank" class="btn_card">En savoir plus</a>
+                    </div>
+                </article>
+
+                <article class="bts_card card-red">
+                    <div class="card_image">
+                        <img src="assets/img/formations/toefl.png" alt="Certification TOEFL">
+                        <span class="tag">Langues</span>
+                    </div>
+                    <div class="card_content">
+                        <h3>TOEFL iBT</h3>
+                        <p>Certification d'anglais reconnue à l'international</p>
+                        <div class="card_options">
+                            <span><i class="fa-solid fa-language"></i> Score valorisé par les entreprises</span>
+                            <span><i class="fa-solid fa-plane-departure"></i> Mobilité internationale</span>
+                        </div>
+                        <a href="#" class="btn_card">En savoir plus</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer class="footer_wrapper">
+            <div class="footer_container">
+                <div class="footer_col">
+                    <img id="logo-footer"
+                        src="assets/img/logos/college-lycee-notre-dame-providence-avranches-logo-couleur.png"
+                        alt="Logo NDLP">
+                    <p>De la 6e au BTS, la réussite de chacun selon son projet personnel.</p>
+                    <div class="social_links">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer_col">
+                    <h4>Collège</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 4 place Croix des Perrières</li>
+                        <li>50300 Avranches</li>
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:02 33 58 43 41">02 33 58 43 41</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_col">
+                    <h4>Lycée & BTS</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 9 Rue Chanoine Bérenger</li>
+                        <li>50300 Avranches</li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:02 33 58 02 22">02 33 58 02 22</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer_bottom">
+                <p>&copy; 2026 NDLP Avranches - Tous droits réservés</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

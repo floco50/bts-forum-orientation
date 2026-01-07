@@ -1,152 +1,365 @@
-*,
-::before,
-::after {
+:root {
+    --primary-color: #000e34;   /* Marine */
+    --secondary-color: #2cabe1; /* Bleu Ciel */
+    --text-color: #666666;      /* Gris foncé pour lisibilité */
+    --light-grey: #f4f7f9;
+    --white: #ffffff;
+}
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-:root {
-    --primary-color: #000e34;
-    --secondary-color: #2cabe1;
-    --text-color: #9d9d9c;
-    --light-grey: #ffffff;
+body {
+    background-color: var(--white);
+    color: var(--primary-color);
+    line-height: 1.6;
 }
 
-@media screen and (min-width : 0px) {
+/* --- Couleurs Mode Sombre --- */
+body.dark-mode {
+    --primary-color: #ffffff;    /* Le texte devient blanc */
+    --secondary-color: #34d1ff;  /* Bleu plus vif pour contraste */
+    --text-color: #cccccc;       /* Gris clair */
+    --light-grey: #2cabe1;       /* Fond des sections sombre */
+    --white: #000e34;            /* Fond des cartes et header sombre */
+}
 
-    /*HEADER*/
-    .header_wrapper {
-        position: fixed;
+/* Style du bouton Switcher */
+.theme-switch {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+    padding: 8px;
+    transition: transform 0.3s;
+}
+
+.theme-switch:hover {
+    transform: scale(1.1);
+}
+
+/* Ajustement pour les cartes en mode sombre */
+body.dark-mode .bts_card {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid #333;
+}
+
+body.dark-mode .card_options {
+    border-top: 1px solid #333;
+}
+
+body.dark-mode .feature_list{
+    color: var(--white);
+}
+
+/*HEADER*/
+.header_wrapper {
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.header_container {
+    width: 100%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo img {
+    height: 70px;
+}
+
+.header_bars i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* --- PRESENTATION --- */
+.presentation_wrapper {
+    margin-top: 120px; /* Espace pour le header fixe */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.presentation_container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.presentation_text h1 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.check_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.check_list li i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.feature_list {
+    background: var(--light-grey);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid var(--secondary-color);
+    text-align: left;
+}
+
+/* --- BTS CARDS --- */
+.bts_wrapper {
+    padding: 60px 20px;
+    background: var(--light-grey);
+}
+
+.bts_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bts_card {
+    background: var(--white);
+    width: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.bts_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.card_image {
+    position: relative;
+    height: 180px;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--secondary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card_content {
+    padding: 25px;
+}
+
+.card_content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card_content p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+
+.card_options {
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.card_options span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.card_options i {
+    color: var(--secondary-color);
+    margin-right: 10px;
+    width: 15px;
+}
+
+.btn_card {
+    display: block;
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn_card:hover {
+    background: var(--secondary-color);
+}
+
+/* --- Variantes de couleurs pour ISEN et TOEFL --- */
+
+/* On change la bordure du bas en rouge */
+.bts_card.card-red {
+    border-bottom: 5px solid #e60000; /* Rouge vif */
+}
+
+/* On change la couleur du Tag */
+.bts_card.card-red .tag {
+    background: #e60000;
+}
+
+/* On change la couleur des icônes */
+.bts_card.card-red .card_options i {
+    color: #e60000;
+}
+
+/* On change la couleur du bouton au repos et au survol */
+.bts_card.card-red .btn_card {
+    background: #e60000;
+}
+
+.bts_card.card-red .btn_card:hover {
+    background: #b30000; /* Rouge plus foncé au survol */
+    color: white !important;
+}
+
+/* Optionnel : changer la couleur du titre en rouge */
+.bts_card.card-red h3 {
+    color: #e60000;
+}
+/* --- FOOTER (COULEURS FIXES) --- */
+.footer_wrapper {
+    /* On utilise des couleurs fixes pour qu'il ne change JAMAIS */
+    background-color: #000e34 !important; /* Ton Marine d'origine */
+    color: #ffffff !important;
+    padding: 60px 0 20px 0;
+    margin-top: 0;
+}
+
+/* On supprime l'effet spécifique au dark-mode pour le footer */
+body.dark-mode .footer_wrapper {
+    background-color: #000e34 !important; 
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer_container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.footer_col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer_col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #ffffff !important; /* Toujours blanc */
+}
+
+/* La petite barre sous les titres */
+.footer_col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background: #2cabe1; /* Ton bleu ciel d'origine fixe */
+}
+
+.footer_col ul li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: #ffffff !important;
+}
+
+.footer_col ul li a{
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: #ffffff !important;
+}
+
+.footer_col i {
+    margin-right: 10px;
+    color: #2cabe1 !important; /* Icônes toujours bleu ciel */
+}
+
+.footer_bottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    opacity: 0.7;
+    color: #ffffff !important;
+}
+
+/* Ajustement du logo dans le footer */
+.footer_col img {
+    height: 60px;
+    margin-bottom: 20px;
+    /* On force le logo à être blanc/clair car le fond est toujours marine */
+    filter: brightness(0) invert(1);
+}
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+    .bts_card {
         width: 100%;
-        height: 100px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        top: 0px;
-        background-color: var(--light-grey);
+        max-width: 400px;
     }
-
-    .header_container {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .header_logo {
-        width: 58px;
-        height: 80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0px 15px;
-    }
-
-    .header_logo>a>img {
-        width: 100%;
-    }
-
-    .header_bars {
-        width: auto;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 0px 15px;
-    }
-
-    .header_bars > i{
-        font-size: 2rem;
-        border-radius: 12px;
-        color: var(--primary-color);
-        border: 2px solid var(--primary-color);
-        padding: 10px;
-    }
-
-    /*PRÉSENTATION*/
-    .presentation_wrapper{
-        position: absolute;
-        top: 100px;
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: -1;
-    }
-
-    .presentation_container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .presentation_text{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .presentation_text > h1{
-        text-align: center;
-        color: var(--secondary-color);
-        margin: 20px 15px;
-    }
-
-    .presentation_text > ul{
-        width: 80%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 10px 0px;
-    }
-
-    .presentation_text > ul > li{
-        color: var(--text-color);
-        margin: 5px;
-    }
-
-    .presentation_text > p{
-        margin: 0px 15px 20px 15px;
-    }
-
-    /*BTS*/
-    .bts_wrapper{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bts_container{
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .bts_card{
-        width: 80%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    
+    .presentation_text h1 {
+        font-size: 1.5rem;
     }
 }
